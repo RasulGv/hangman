@@ -6,11 +6,11 @@ const startAudio=document.querySelector('.startaudio')
 const winAudio=document.querySelector('.winaudio')
 const loseAudio=document.querySelector('.loseaudio')
 
-// Başlangıçta gösterilen intro mesajı
+
 startButton.addEventListener('click', () => {
-    introContainer.style.display = 'none'; // intro ekranını gizle
-    gameContainer.style.display = 'block'; // oyun ekranını göster
-    startGame(); // oyunu başlat
+    introContainer.style.display = 'none'; 
+    gameContainer.style.display = 'block'; 
+    startGame(); 
     startAudio.play()
 });
 
@@ -66,14 +66,16 @@ const list=[
     }
 
 ];
-let currentWord, correctLetters=[], wrongGuessCount=0;
+let currentWord
+let correctLetters=[] 
+let wrongGuessCount=0;
 const maxGuesses=6;
 const resetGame=()=>{
     correctLetters=[];
     wrongGuessCount=0;
     hangmanImg.src=`images/hangman-${wrongGuessCount}.svg`;
     hintGuess.innerText=`${wrongGuessCount}/${maxGuesses}`;
-    keyboard. querySelectorAll('button').forEach
+    // keyboard. querySelectorAll('button').forEach
     display.innerHTML=currentWord.split('').map(()=>` <li class="letter"></li>`).join('');
     gameModal.classList.remove('show');  
 }

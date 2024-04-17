@@ -127,3 +127,4 @@ for (let i = 97;  i <=122; i++){
 randomWord();
 
 playAgain.addEventListener('click',randomWord)}
+
